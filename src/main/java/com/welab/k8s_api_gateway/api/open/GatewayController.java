@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/api/gateway/v1", produces = MediaType.APPLICATION_JSON_VALUE)
 @RequiredArgsConstructor
 public class GatewayController {
-    @GetMapping(value = "/test")
-    public String test() {
-        return "Hello Kubernetes";
+    @GetMapping(value = "/hello")
+    public ApiResponseDto<String> test() {
+        return ApiResponseDto.createOk("안녕 쿠버네티스");
     }
 }
